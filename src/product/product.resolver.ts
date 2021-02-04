@@ -14,7 +14,7 @@ export class ProductResolver {
         {
             id: "500",
             name: 'ProductTwo',
-            asdasd: ""
+            asdasd: "a"
         }]
         return res
     }
