@@ -1,3 +1,6 @@
+## First Istall 
+git clone https://github.com/farmrakpong/nest_graphql.git
+
 ## Running the app
 $ npm run start:dev
 
