@@ -1,6 +1,9 @@
 ## Running the app
 $ npm run start:dev
 
+# RUN PROT
+http://localhost:3000/graphql
+
                               -------------------
                               |                 |
                               |  product.module |
