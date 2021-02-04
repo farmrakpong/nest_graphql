@@ -15,7 +15,7 @@ export class ServiceService {
     }
 
     creatBook(result:Book){
-            console.log(result.name);
+            // console.log(result.name);
             return result
             
     }

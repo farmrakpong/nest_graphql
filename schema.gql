@@ -17,7 +17,6 @@ type Product {
   name: String
   deatail: String
   dateCreate: String
-  asdasd: String
 }
 
 type Query {
@@ -27,6 +26,7 @@ type Query {
 
 type Mutation {
   createBook(input: InputBook!): Book!
+  createProduct(input: InputProduct!): Product!
 }
 
 input InputBook {
@@ -34,4 +34,10 @@ input InputBook {
   price: Float
   description: String
   writer: [String!]
+}
+
+input InputProduct {
+  name: String
+  deatail: String
+  dateCreate: String
 }

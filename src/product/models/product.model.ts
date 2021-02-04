@@ -16,7 +16,6 @@ export class Product{
     @Field(type => String ,{ nullable: true})
     dateCreate?:string
 
-    @Field(type => String ,{ nullable: true})
-    asdasd?:string
+
 
 }

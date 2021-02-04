@@ -1,21 +1,25 @@
 
-import { Query, Resolver } from '@nestjs/graphql';
-import { Product } from './models/peoduct.model';
+import { Args, Mutation, Query, Resolver } from '@nestjs/graphql';
+import { InputProduct } from './dto/product.input';
+import { Product } from './models/product.model';
+import { ProductService } from './service/product.service';
 
 @Resolver('Product')
 export class ProductResolver {
+    constructor(private productService: ProductService){}
     @Query(returns => [Product])
     getProduct(): Product[] {
-        const res:Product[] = [{
-            id: "500",
-            name: 'produckOne',
-            asdasd: ""
-        },
-        {
-            id: "500",
-            name: 'ProductTwo',
-            asdasd: "a"
-        }]
+        return this.productService.getProduct()
+    }
+
+    @Mutation(returns => Product)
+    createProduct(@Args('input') input:InputProduct):Product{
+        const res:Product = {
+                id :"50",
+                ...input // จะใช้แบบนี้ได้พวก Field input กับ model ต้องเหมือนกัน 
+        }
+        console.log(input);
         return res
+        
     }
 }
